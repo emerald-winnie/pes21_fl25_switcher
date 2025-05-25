@@ -2,6 +2,10 @@
 
 Here's a simple way to switch between the Steam version of PES 2021 and Football Life 2025 within the same folder.
 
+Don't use the .exe files if you don't trust them. They're there for convenience. Due to their behaviour of renaming files, your AV may flag them as a virus, but this is a false positive.
+
+What do they do? They literally run the corresponding .bat file in the folder which you can anaylse (more on this later).
+
 I know what you're thinking, "WHY?"
 
 Well, Football Life 2025 has everything I need:
@@ -191,7 +195,9 @@ Here's what they do: the .exe files do is simply run the relevant .bat script.
 
 Why create .exe files that just run .bat scripts? So, you can add them to Steam and not have to faff around too much with creating shortcuts and using command prompt.
 
-You are welcome to do that though.
+You are welcome to do that though. Or you can create your own .exe files with something like:
+
+https://github.com/Makazzz/BatToExePortable
 
 You can also change the .exe file that Steam launches, or launch a .bat file, instead using this method.
 
