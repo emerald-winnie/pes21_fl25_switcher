@@ -1,14 +1,18 @@
-# Steam PES 2021 & Football Life 2025 Switcher
-
-**Goes without saying: always back up your files first (unless you're an adventurous risk taker)**
+> **Goes without saying: always back up your files first (unless you're an adventurous risk taker)**
 
 Here's a simple way to switch between the Steam version of PES 2021 and Football Life 2025 within the same folder.
 
-Don't use the .exe files if you don't trust them. They're there for convenience. Due to their behaviour of renaming files, your AV may flag them as a virus, but this is a false positive.
+Files needed are on Github:
 
-What do they do? They literally run the corresponding .bat file in the folder which you can anaylse (more on this later).
+https://github.com/emerald-winnie/pes21_fl25_switcher/
 
-I know what you're thinking, "WHY?"
+> NOTE:
+> Don't use the .exe files if you don't trust them, stick to the .bat scripts
+> Due to their behaviour of renaming files, your AV may flag them as a virus, but this is a false positive.
+> What do they do?
+> They literally run the corresponding .bat file in the folder which you can anaylse (more on this later).
+
+So, I know what you're thinking, "WHY?"
 
 Well, Football Life 2025 has everything I need:
 - It's up to date
@@ -47,7 +51,9 @@ steamclient64.dll >  a crack file we don't need >  can rename to >  steamclient6
 settings.exe > not needed > can rename to > settings.backup to avoid later confusion
 ```
 
-In this repo, inside "fl25_data_folder", you will find a "convert_fl25_cpk_files.bat" file.
+In this repo, inside "fl25_data_folder", you will find a "convert_fl25_cpk_files.bat" file:
+
+https://github.com/emerald-winnie/pes21_fl25_switcher/tree/main/fl25_data_folder
 
 Place the "convert_fl25_cpk_files.bat" script inside the Football Life 2025 > data folder and run it e.g.:
 
@@ -193,6 +199,8 @@ In this case though, simply changing the flag state to 4 is enough.
 
 In this repo, there is a "game_folder" with .bat scripts and .exe files:
 
+https://github.com/emerald-winnie/pes21_fl25_switcher/tree/main/game_folder
+
 ```
 FL2025_Launcher.bat
 FL2025_Launcher.exe
@@ -271,7 +279,9 @@ Steam Edit would even allow you to create a pop-up menu of different launch opti
 
 ## Save folder
 
-You must run the Steam version of PES 2021 and go through the setup stage first so it creates the option, system and edit files.
+Before we get into it, the Steam version of PES 2021 needs to set up some files:
+
+**You must run the Steam version of PES 2021 and go through the setup stage first so it creates the option, system and edit files.**
 
 - Launch the game and go through the steps until the main menu
 - At the main menu go to options > edit data
@@ -287,17 +297,42 @@ SYSTEM00000000
 
 Now, you're ready for the next steps.
 
-Placing the "save_folder" files in your save location, which is usually in:
+In this repo, you will find "save_folder" folder, which has the backups of the Football Life 2025 save files already named for you:
 
-`C:\Users\Username\OneDrive\Documents\KONAMI\eFootball PES 2021 SEASON UPDATE\76561197990587099\save`
+https://github.com/emerald-winnie/pes21_fl25_switcher/tree/main/save_folder
 
-or use this to get there faster:
+Alternatively, You can also find these and rename them yourself here (default location):
 
-`%USERPROFILE%\Documents\KONAMI\eFootball PES 2021 SEASON UPDATE\76561197990587099\save`
+```
+C:\Users\Username\OneDrive\Documents\KONAMI\eFootball PES 2021 SEASON UPDATE\2025\save
 
-The "marco" text file is there for debugging purposes and let you know if the scripts are working. It should switch between "marco" and "polo" each time you run the switcher.
+%USERPROFILE%\Documents\KONAMI\eFootball PES 2021 SEASON UPDATE\2025\save
+```
 
-The save files will have the following extensions on them `.fl25_save` these are the Football Life 2025 files.
+Rename them as such:
+
+```
+EDIT00000000 > EDIT00000000.fl25_save
+FILELIST00000000 > FILELIST00000000.fl25_save
+GRAPHICS000000 > GRAPHICS000000.fl25_save
+SYSTEM00000000 > SYSTEM00000000.fl25_save
+```
+
+- Download and copy the files from the "save_folder"
+- or the ones in the "/2025/save" folder
+- To the PES 2021 save location, which is usually in:
+
+```
+C:\Users\Username\OneDrive\Documents\KONAMI\eFootball PES 2021 SEASON UPDATE\76561197990587099\save`
+
+`%USERPROFILE%\Documents\KONAMI\eFootball PES 2021 SEASON UPDATE\76561197990587099\save
+```
+
+> (optional)
+> Place or create the marco.txt file in the save location.
+> It is there for debugging purposes and let you know if the scripts are working. It should switch between "marco" and "polo" each time you run the switcher.
+
+So, the save files will have the following extensions on them `.fl25_save` these are the Football Life 2025 files.
 
 Upon running the script, it will change the ones without an extension to `.pes21_save`
 
