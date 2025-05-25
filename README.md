@@ -22,7 +22,9 @@ Well, Football Life 2025 has everything I need:
 - With faces, my current file size is around 124gb.
 - So, you're not dealing with 200gb - 500gb total file sizes.
 
-But, sometimes I like to play the original PES with a modified gameplay mod, or maybe I just want to play online with a friend.
+But, sometimes I like to test / play gameplay mods that only work for the official version, or maybe I just want to play online with a friend.
+
+Originally, this meant having both Football Life 2025 installed and Steam's PES 2021 installed... but, I figured there's probably a better way of dealing with it.
 
 So, this is the workaround I developed to allow that without having two versions of the game installed in separate folders.
 
