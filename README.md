@@ -1,5 +1,7 @@
 # Steam PES 2021 & Football Life 2025 Switcher
 
+**Goes without saying: always back up your files first (unless you're an adventurous risk taker)**
+
 Here's a simple way to switch between the Steam version of PES 2021 and Football Life 2025 within the same folder.
 
 Don't use the .exe files if you don't trust them. They're there for convenience. Due to their behaviour of renaming files, your AV may flag them as a virus, but this is a false positive.
