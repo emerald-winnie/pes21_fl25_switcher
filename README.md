@@ -29,14 +29,6 @@ So, this is the workaround I developed to allow that without having two versions
 - Install everything you want to install for FL 2025 (the updates, facepacks, soundtracks etc.)
 - Make sure your Football Life 2025 is working nice and smooth. Test it out.
 
-Okay, this next bit is very important, delete or rename these two files.
-
-```
-steam_api64.dll > can rename to >  steam_api64.backup
-steamclient64.dll > can rename to >  steamclient64.backup
-settings.exe > can rename to > settings.backup
-```
-
 All done? Great. Let's kick things off.
 
 ## Prepare to transfer Football Life 2025 assets
@@ -45,7 +37,17 @@ Go to where you installed Football Life 2025 and go into the data folder. My ins
 
 `D:\Football Life 2025`
 
-Place the .bat script inside "fl25_data_folder" into the data folder and run it, mine would be:
+Okay, this next bit is very important, delete or rename these files (they could break stuff):
+
+```
+steam_api64.dll > a crack file we don't need > can rename to >  steam_api64.backup
+steamclient64.dll >  a crack file we don't need >  can rename to >  steamclient64.backup
+settings.exe > not needed > can rename to > settings.backup to avoid later confusion
+```
+
+In this repo, inside "fl25_data_folder", you will find a "convert_fl25_cpk_files.bat" file.
+
+Place the "convert_fl25_cpk_files.bat" script inside the Football Life 2025 > data folder and run it e.g.:
 
 `D:\Football Life 2025\Data`
 
@@ -83,12 +85,14 @@ What does it do? It takes the following files and changes the extension to `.fl2
 - dt70_x64.cpk > dt70_x64.fl25_cpk
 ```
 
-Make absolutely sure you have deleted or renamed the following:
+Now, before we continue...
+
+Make absolutely sure you have deleted or renamed the following inside the Football Life 2025 folder:
 
 ```
-steam_api64.dll > can rename to >  steam_api64.backup
-steamclient64.dll > can rename to >  steamclient64.backup
-settings.exe > can rename to > settings.backup
+steam_api64.dll
+steamclient64.dll
+settings.exe
 ```
 
 ## Let's transfer
@@ -100,11 +104,15 @@ Now move all the files from the Football Life 2025 folder to your Steam PES 2021
 Try launching `PES2021.exe` it should do the following:
 
 - Launch just fine because you've done it right.
-- It might "update," but that's okay because the Football Life 2025 files were already renamed before you moved them here... I mean, you did that, right?
+- The game might run a general update which sometimes breaks things if the Football Life 2025 Data files are not renamed to `.fl25_cpk`
+- So, make sure they are renamed.
 
 ## Update sider.ini
 
-Go to SiderAddons > open sider.ini with notepad
+Now that you've transferred all the files to your Steam PES 2021 folder location, it's time to update sider.ini:
+
+- Go to the SiderAddons folder
+- Right click on sider.ini and open / edit with notepad
 
 Now, it's time to add the PES2021.exe to it
 
@@ -181,11 +189,25 @@ In this case though, simply changing the flag state to 4 is enough.
 
 ## Game folder
 
-Place the files in the "game_folder" folder to where you have installed Steam PES 2021 game, default location:
+In this repo, there is a "game_folder" with .bat scripts and .exe files:
+
+```
+FL2025_Launcher.bat
+FL2025_Launcher.exe
+PES2021_Launcher.bat
+PES2021_Launcher.exe
+PES_Game_Launcher.bat
+PES_Game_Launcher.exe
+PES_Version_Switcher.bat
+PES_Version_Switcher.exe
+currentversion_PES21
+```
+
+Places the files where you have installed Steam PES 2021 game, default location:
 
 `C:\Program Files (x86)\Steam\steamapps\common\eFootball PES 2021`
 
-If you don't like running random .exe files you've downloaded on the internet (you smart cookie) then don't download or delete them and stick to the .bat files that you can analyse.
+**If you don't like running random .exe files you've downloaded on the internet (you smart cookie) then don't download / delete them and stick to the .bat files that you can read and analyse.**
 
 ### Exe files and bat scripts explained
 
@@ -198,21 +220,6 @@ Why create .exe files that just run .bat scripts? So, you can add them to Steam 
 You are welcome to do that though. Or you can create your own .exe files with something like:
 
 https://github.com/Makazzz/BatToExePortable
-
-You can also change the .exe file that Steam launches, or launch a .bat file, instead using this method.
-
-- Right click on PES 2021 and add this under advanced options:
-- Works for any game.
-
-```
-"<full path to exe or bat file>" %command%
-
-Examples:
-"C:\Program Files (x86)\Steam\steamapps\common\eFootball PES 2021\PES_Game_Launcher.exe" %command%
-"C:\Program Files (x86)\Steam\steamapps\common\eFootball PES 2021\PES_Game_Launcher.bat" %command%
-```
-
-Alternatively, you can use something like Steam Edit: https://steamedit.tg-software.com/
 
 **currentversion_PES21**
 This is a marker file. The scripts will look for this file to determine what to rename the other files.
@@ -242,6 +249,23 @@ This converts all files to the original Steam PES 2021 and then runs `PES_Game_L
 
 FL2025_Launcher.exe runs FL2025_Launcher.bat
 This converts all files to Football Life 2025 and then runs `PES_Game_Launcher.bat`
+
+## Launch options for running a different .exe or .bat for a Steam game
+
+You can change the .exe file that Steam launches, or launch a .bat file, instead using this method (works for any game).
+
+- Right click on PES 2021
+- Add this under advanced options: `<full path to exe or bat file>" %command%`
+
+```
+Examples:
+"C:\Program Files (x86)\Steam\steamapps\common\eFootball PES 2021\PES_Game_Launcher.exe" %command%
+"C:\Program Files (x86)\Steam\steamapps\common\eFootball PES 2021\PES_Game_Launcher.bat" %command%
+```
+
+Alternatively, you can use something like Steam Edit: https://steamedit.tg-software.com/
+
+Steam Edit would even allow you to create a pop-up menu of different launch options.
 
 ## Save folder
 
