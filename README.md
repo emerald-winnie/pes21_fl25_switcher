@@ -237,42 +237,29 @@ Or you can create your own .exe files with something like:
 
 https://github.com/Makazzz/BatToExePortable
 
-'''
-currentversion_PES21:
+- currentversion_PES21:
+  - This is a marker file.
+  - The scripts will look for this file to determine what to rename the other files.
+  - This will switch between `currentversion_PES21` and `currentversion_FL25` each time you run the switcher.
 
-- This is a marker file.
-- The scripts will look for this file to determine what to rename the other files.
-- This will switch between `currentversion_PES21` and `currentversion_FL25` each time you run the switcher.
+- PES_Version_Switcher.exe runs PES_Version_Switcher.bat
+  - This checks the currentversion and switches to the other.
 
-PES_Version_Switcher.exe runs PES_Version_Switcher.bat
+- PES_Game_Launcher.exe runs PES_Game_Launcher.bat
+  - This looks at the currentversion and launches the relevant game exe.
+  - This also launches sider.exe
+  - By default, it will launch this .exe of Football Life 2025: FL_2025.exe
+    - If you have a different game version, like the PES6 gameplay .exe, you can change it to that version via:
+    - Right click on PES_Game_Launcher.bat and find this line:
+    - `set FL25_EXE=FL_2025.exe`
+    - Change it to your new exe e.g.
+    - `set FL25_EXE=Custom_FL_2025.exe`
 
-- This checks the currentversion and switches to the other.
+- PES2021_Launcher.exe runs PES2021_Launcher.bat
+  - This converts all files to the original Steam PES 2021 and then runs `PES_Game_Launcher.bat`
 
-PES_Game_Launcher.exe runs PES_Game_Launcher.bat
-
-- This looks at the currentversion and launches the relevant game exe.
-- This also launches sider.exe
-
-By default, it will launch this .exe of Football Life 2025: FL_2025.exe
-
-If you have a different game version, like the PES6 gameplay .exe, you can change it to that version via:
-
-Right click on PES_Game_Launcher.bat and find this line:
-
-`set FL25_EXE=FL_2025.exe`
-
-Change it to your new exe e.g.
-
-`set FL25_EXE=Custom_FL_2025.exe`
-
-PES2021_Launcher.exe runs PES2021_Launcher.bat
-
-- This converts all files to the original Steam PES 2021 and then runs `PES_Game_Launcher.bat`
-
-FL2025_Launcher.exe runs FL2025_Launcher.bat
-
-- This converts all files to Football Life 2025 and then runs `PES_Game_Launcher.bat`
-'''
+- FL2025_Launcher.exe runs FL2025_Launcher.bat
+  - This converts all files to Football Life 2025 and then runs `PES_Game_Launcher.bat`
 
 ## Launch options for running a different .exe or .bat for a Steam game
 
