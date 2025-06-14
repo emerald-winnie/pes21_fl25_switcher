@@ -229,7 +229,11 @@ Here's what they do: the .exe files do is simply run the relevant .bat script.
 
 Why create .exe files that just run .bat scripts? So, you can add them to Steam and not have to faff around too much with creating shortcuts and using command prompt.
 
-You are welcome to do that though. Or you can create your own .exe files with something like:
+You are welcome to do that though by adding the .exe as a non-steam shortcut:
+
+https://help.steampowered.com/en/faqs/view/4B8B-9697-2338-40EC
+
+Or you can create your own .exe files with something like:
 
 https://github.com/Makazzz/BatToExePortable
 
